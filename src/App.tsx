@@ -1,50 +1,49 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/core";
+import { getCurrentWindow } from "@tauri-apps/api/window";
 import "./App.css";
 
-function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
 
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
-  }
+const appWindow = getCurrentWindow();
+
+function App() {
+  // Estado para controlar o dinheiro no cofre
+  const [saldo, setSaldo] = useState<number>(0);
 
   return (
-    <main className="container">
-      <h1>Welcome to Tauri + React</h1>
+    <div className="app-container">
+      {/* 1. BARRA DE TÍTULO CUSTOMIZADA */}
+      <nav data-tauri-drag-region className="titlebar">
+        <div className="titlebar-label">Coflinho 🐷</div>
+        <div className="titlebar-actions">
+          <button className="titlebar-button" onClick={() => appWindow.minimize()}>
+            ─
+          </button>
+          <button className="titlebar-button" onClick={() => appWindow.toggleMaximize()}>
+            ▢
+          </button>
+          <button className="titlebar-button exit" onClick={() => appWindow.close()}>
+            ✕
+          </button>
+        </div>
+      </nav>
 
-      <div className="row">
-        <a href="https://vite.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
-
-      <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          greet();
-        }}
-      >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
-        <button type="submit">Greet</button>
-      </form>
-      <p>{greetMsg}</p>
-    </main>
+      {/* 2. CONTEÚDO DO APLICATIVO */}
+      <main className="content">
+        <div className="balance-card">
+          <p>Saldo total</p>
+          <h1>R$ {saldo.toFixed(2)}</h1>
+          
+          <div className="actions">
+            <button onClick={() => setSaldo(saldo + 10)}>
+              Depositar R$ 10
+            </button>
+            <button onClick={() => setSaldo(0)} className="reset-btn">
+              Esvaziar Cofre
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }
 
