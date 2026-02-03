@@ -12,12 +12,13 @@
   "app": {
     "windows": [
       {
-        "title": "COFLINHO",
-        "width": 800,
-        "height": 600,
-        "transparent": true,
-        "decorations": true,
-        "titleBarStyle": "Visible"
+        "title": "coflinho",
+        "width": 393,
+        "height": 852,
+        "resizable": false,
+        "transparent": false,
+        "fullscreen": false,
+        "decorations": false
       }
     ],
     "security": {

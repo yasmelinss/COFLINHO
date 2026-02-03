@@ -4,10 +4,8 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
-  color: #0f0f0f;
-  background-color: #f6f6f6;
-
+  color: #fff;
+  background-image: url("/img/nuvens-vetor.jpg");
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,7 +25,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding-left: 10px;
+  padding: 5px;
 }
 
 /* Estilo do botão de fechar */
@@ -52,3 +50,13 @@
 .content {
   margin-top: 40px;
 }
+
+.balanço-patrimonial{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
