@@ -43,27 +43,11 @@ function App() {
 
 
         <main className="content">
-          <div className="balanço-patrimonial">
-            <h1>Salvo no mês</h1>
-            <h2>R$ X</h2>
-            <p> Você está a X% de alcançar sua meta</p>
-            <img src="src-tauri/icons/128x128@2x.png" alt="Piggy bank" />
-          </div>
-
-          <div className="ações">
-            <button onClick={() => +1}>
-              Novo Ganho
-            </button>
-            <button>
-              Novo Gasto
-            </button>
-          </div>
-
-          {/* <Routes>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/historico" element={<Historico />} />
             <Route path="/metas" element={<Metas />} />
-          </Routes> */}
+          </Routes>
 
 
           <div className="balance-card">
