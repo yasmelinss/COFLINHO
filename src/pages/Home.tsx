@@ -7,16 +7,19 @@ export default function Home() {
     <div className="balanço-patrimonial">
       <h1>Salvo no mês</h1>
       <h2>R$ {saldo}</h2>
-      <p>Você está a 50% de alcançar sua meta</p>
+      <p>Você está a {saldo+1} de alcançar sua meta</p>
       <img src="src-tauri/icons/128x128@2x.png" alt="Piggy bank" />
 
       <div className="ações">
-        <button onClick={() => setSaldo(saldo + 1)}>
+        <button className="buttomHome1" onClick={() => setSaldo(saldo + 1)}>
           Novo Ganho
         </button>
-        <button onClick={() => setSaldo(saldo - 1)}>
+        <button className="buttomHome2" onClick={() => setSaldo(saldo - 1)}>
           Novo Gasto
         </button>
+      </div>
+      <div>
+        <h2>Posso gastar: </h2>
       </div>
     </div>
   );
