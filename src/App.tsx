@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Historico from "./pages/Historico";
 import Metas from "./pages/Metas";
+import Perfil from "./pages/Perfil";
 
 const appWindow = getCurrentWindow();
 
@@ -37,6 +38,7 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="/historico">Histórico</Link>
           <Link to="/metas">Metas</Link>
+          <Link to="/perfil">Perfil</Link>
         </nav>
 
         {/* 2. CONTEÚDO DO APLICATIVO */}
@@ -47,6 +49,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/historico" element={<Historico />} />
             <Route path="/metas" element={<Metas />} />
+            <Route path="/perfil" element={<Perfil />} />
           </Routes>
 
 

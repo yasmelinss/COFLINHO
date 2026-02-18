@@ -18,7 +18,7 @@
         "resizable": false,
         "transparent": false,
         "fullscreen": false,
-        "decorations": false
+        "decorations": true
       }
     ],
     "security": {
