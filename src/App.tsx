@@ -53,19 +53,7 @@ function App() {
           </Routes>
 
 
-          <div className="balance-card">
-            <p>Saldo total</p>
-            <h1>R$ {saldo.toFixed(2)}</h1>""
-
-            <div className="actions">
-              <button onClick={() => setSaldo(saldo + 10)}>
-                Depositar R$ 10
-              </button>
-              <button onClick={() => setSaldo(0)} className="reset-btn">
-                Esvaziar Cofre
-              </button>
-            </div>
-          </div>
+          
         </main>
       </div>
     </BrowserRouter>
