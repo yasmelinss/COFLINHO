@@ -38,7 +38,8 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="/historico">Histórico</Link>
           <Link to="/metas">Metas</Link>
-          <Link to="/perfil">Perfil</Link>
+          <Link to="/perfil">Perfillllllll</Link>
+          {/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */}
         </nav>
 
         {/* 2. CONTEÚDO DO APLICATIVO */}
@@ -51,9 +52,6 @@ function App() {
             <Route path="/metas" element={<Metas />} />
             <Route path="/perfil" element={<Perfil />} />
           </Routes>
-
-
-          
         </main>
       </div>
     </BrowserRouter>
@@ -61,3 +59,4 @@ function App() {
 }
 
 export default App;
+
