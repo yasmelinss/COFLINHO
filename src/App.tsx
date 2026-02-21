@@ -38,8 +38,7 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="/historico">Histórico</Link>
           <Link to="/metas">Metas</Link>
-          <Link to="/perfil">Perfillllllll</Link>
-          {/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */}
+          <Link to="/perfil">Perfil</Link>
         </nav>
 
         {/* 2. CONTEÚDO DO APLICATIVO */}
